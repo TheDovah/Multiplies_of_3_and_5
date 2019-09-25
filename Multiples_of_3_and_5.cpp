@@ -5,9 +5,11 @@ int Numbercount ()
     int Number3 = 3;
     int Number5 = 5;
 
-    int i = 1;
+    int my_array3[]{};
+    int my_array5[]{}
 
-    while (i <= 100)
+    /*
+    while (i <= 1000)
     {
         int NewNumber3 = i*Number3;
         int NewNumber5 = i*Number5;
@@ -17,7 +19,7 @@ int Numbercount ()
 
         i++;
     }
-    
+    */
 
     return 1;
     

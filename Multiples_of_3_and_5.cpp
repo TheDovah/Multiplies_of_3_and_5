@@ -21,7 +21,7 @@ int main ()
     std::cout << "Original value of i: " << i << std::endl;
     std::cout << "-----------------------" << std::endl;
 
-    
+/*
     do
     {   
 
@@ -35,7 +35,7 @@ int main ()
         
        
 
-        if (OldNumber3 < 10 > NewNumber3 && OldNumber5 < 10 > NewNumber5)
+        if (5 < OldNumber3 < 10 > NewNumber3 && 5 < OldNumber5 < 10 > NewNumber5)
         {
         
             int NewNumber5 = OldNumber5;
@@ -56,7 +56,7 @@ int main ()
 
         std::cout << "Value of the numbers added is: " << AddedNumber << std::endl;
         std::cout << "-----------------------" << std::endl;
-        std::cout << "-----------------------" << std::endl;
+        std::cout << "***********************" << std::endl;
         std::cout << "" << std::endl;
 
             return 0;
@@ -99,9 +99,31 @@ int main ()
     
     }
     while (i <= 5);
+*/
+
+    while (i < 5){
+
+        NewNumber3 = i * Number3;
+
+        std::cout << "Value of NewNumber3: " << NewNumber3 << std::endl;
+        std::cout << "Original value of OldNumber3: " << OldNumber3 << std::endl;
+
+        OldNumber3 = NewNumber3;
+        std::cout << "Value of OldNumber3: " << OldNumber3 << std::endl;
+        std::cout << "" << std::endl;
 
 
-
+        if (OldNumber3 > 10 > NewNumber3)
+        {
+            std::cout << "IT DID SOMETHING!" << std::endl;
+            return 0;
+        }
+        else
+        {
+            i++;
+        }
+                
+    }
 
     return 0;
     

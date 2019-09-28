@@ -19,8 +19,13 @@ int main ()
     int sum = 0;
 
     int i = 1;
-    int lim = 1000;
 
+    int lim;
+    cout << "What is the limit you are after?" << endl;
+    cout << "" << endl;
+    cin >> lim;
+    cout << "------------------" << endl;
+    cout << "" << endl;
     
 /*
     cout << "Original value of Number3: " << Number3 << endl;
@@ -29,12 +34,12 @@ int main ()
     cout << "-----------------------" << endl;
 */
 
-    while (i <= 10000)
+    while (i <= lim * 100)
     {   
         int NewNumber3 = i * Number3;
         int NewNumber5 = i * Number5;
 
-/*        
+/*    
         cout << "Value of Number3: " << Number3 << endl;
         cout << "Value of Number5: " << Number5 << endl;
         cout << "Value of NewNumber3: " << NewNumber3 << endl;
@@ -45,9 +50,9 @@ int main ()
         cout << "-----------------------" << endl;
 */
 
-        if (OldNumber3 >= lim || OldNumber5 > lim)
+        if (OldNumber3 > lim || OldNumber5 > lim)
         {
-            cout << "WRONG" << endl;
+            //cout << "WRONG" << endl;
             return 0;
         }
 
@@ -67,18 +72,14 @@ int main ()
                 
         }
 
-        if (OldNumber5 > lim)
-        {
-            cout << "WRONG" << endl;
-            return 0;
-        }
+       
 
         if (OldNumber5 < lim)
         {
             if (NewNumber5 < lim)
             {
                 GoodNumbers.push_back(NewNumber5);
-/*                
+/*
                 cout << "" << endl;
                 cout << "NewNumber5 if statement" << endl;
                 cout << "Newnumber3: " << NewNumber3 << endl;
@@ -121,7 +122,7 @@ int main ()
             cout << "----------------------------" << endl;
             cout << "This is the good numbers so far: " << GoodNumbers[b] << endl;
 */
-        }
+    }
         
         
 

@@ -147,10 +147,22 @@ int main ()
             sum += GoodNumbers[c];
             
         }
-    
-    cout << "The answer is: "<< sum << endl;
+
+
+    cout << "The multiples of 3 and 5 are: ";
+    for (int b = 0; b < GoodNumbers.size(); b++)
+        {
+        cout << "" << GoodNumbers[b];
+        cout << ", ";
+        }
     cout << "" << endl;
-    //cout << "" << endl;
+    cout << "------------------------------" << endl;
+    cout << "" << endl;
+    cout << "The sum is: "<< sum << endl;
+    cout << "" << endl;
+    
+    
+    
     return 0;
     
     

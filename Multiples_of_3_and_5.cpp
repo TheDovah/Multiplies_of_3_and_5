@@ -4,20 +4,22 @@ using namespace std;
 
 int main ()
 {
+    vector<int> GoodNumbers;
+
     int Number3 = 3;
     int Number5 = 5;
 
-    int OldNumber3;
-    int OldNumber5;
+    int OldNumber3 = 0;
+    int OldNumber5 = 0;
 
     int NewNumber3;
     int NewNumber5;
 
-    int GoodNumber3 = 0;
-    int GoodNumber5 = 0;
+    int sum = 0;
 
     int i = 1;
-    
+    int lim = 10;
+
     
 
     cout << "Original value of Number3: " << Number3 << endl;
@@ -40,22 +42,18 @@ int main ()
         cout << "Value of i: " << i << endl;
         cout << "-----------------------" << endl;
 
-        if (OldNumber3 > 10)
+        if (OldNumber3 >= lim || OldNumber5 > lim)
         {
             cout << "WRONG" << endl;
             return 0;
         }
 
-        if (OldNumber3 <= 10)
+        if (OldNumber3 < lim)
         {
-            if (NewNumber3 > 10)
+            if (NewNumber3 < lim)
             {
-                GoodNumber3 = NewNumber3;
-                /*NewNumber5 = OldNumber5;*/
+                GoodNumbers.push_back(NewNumber3);
                 cout << "" << endl;
-                cout << "NewNumber3 if statement" << endl;
-                cout << "Goodnumber3: " << GoodNumber3 << endl;
-                cout << "Goodnumber5: " << GoodNumber5 << endl;
                 cout << "Newnumber3: " << NewNumber3 << endl;
                 cout << "NewNumber5: " << NewNumber5 << endl;
                 cout << "Value of i: " << i << endl;
@@ -66,22 +64,20 @@ int main ()
                 
         }
 
-        if (OldNumber5 > 10)
+        if (OldNumber5 > lim)
         {
             cout << "WRONG" << endl;
             return 0;
         }
 
-        if (OldNumber5 <= 10)
+        if (OldNumber5 < lim)
         {
-            if (NewNumber5 <= 10)
+            if (NewNumber5 < lim)
             {
-                GoodNumber5 = NewNumber5;
+                GoodNumbers.push_back(NewNumber5);
                 /*NewNumber3 = OldNumber3;*/
                 cout << "" << endl;
                 cout << "NewNumber5 if statement" << endl;
-                cout << "Goodnumber3: " << GoodNumber3 << endl;
-                cout << "Goodnumber5: " << GoodNumber5 << endl;
                 cout << "Newnumber3: " << NewNumber3 << endl;
                 cout << "NewNumber5: " << NewNumber5 << endl;
                 cout << "Value of i: " << i << endl;
@@ -92,16 +88,19 @@ int main ()
                        
         }
         
-/*
-        OldNumber3 = NewNumber3;
-        OldNumber5 = NewNumber5;
- */
+        for (int b = 0; b < GoodNumbers.size(); b++)
+        {
+            cout << "This is the good numbers so far: " << GoodNumbers[b] << endl;
+        }
+        
+        
 
-        if (NewNumber3 > 10){}
+
+        if (NewNumber3 > lim){}
         else {
             OldNumber3 = NewNumber3;
         }
-        if (NewNumber5 > 10){}
+        if (NewNumber5 > lim){}
         else {
             OldNumber5 = NewNumber5;
         }
@@ -110,6 +109,12 @@ int main ()
         
     
     }
+
+    for (int c = 0; c < GoodNumbers.size(); c++)
+        {
+            sum += GoodNumbers[c];
+            cout << sum << endl;
+        }
     
 
 

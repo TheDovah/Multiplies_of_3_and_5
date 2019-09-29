@@ -16,11 +16,12 @@ int main ()
     int NewNumber3;
     int NewNumber5;
 
-    int sum = 0;
+    long int sum = 0;
 
     int i = 1;
 
     int lim;
+    //cout << "" << GoodNumbers.max_size() << endl;
     cout << "What is the limit you are after?" << endl;
     cout << "" << endl;
     cin >> lim;
@@ -92,6 +93,32 @@ int main ()
                        
         }
         
+
+        
+        
+        
+
+
+        if (NewNumber3 > lim){break;}
+        else {
+            OldNumber3 = NewNumber3;
+        }
+        if (NewNumber5 > lim){}
+        else {
+            OldNumber5 = NewNumber5;
+        }
+        
+        cout << "This is round: " << i << endl;
+
+        i++;
+        
+    
+    }
+
+
+    cout << "------------------" << endl;
+    cout << "Sorting..." << endl;
+    cout << "------------------" << endl;
         sort(GoodNumbers.begin(), GoodNumbers.end());
 
         for (int b = 0; b < GoodNumbers.size(); b++)
@@ -99,12 +126,6 @@ int main ()
 
             if (b > 0)
             {
-/*
-                 cout << "b = " << b;
-                 cout << ", ";
-                 cout << "The Number is: " << GoodNumbers[b];
-                 cout << ", ";
-*/
 
                 if (GoodNumbers[b] == GoodNumbers[b-1])
                 {
@@ -118,28 +139,7 @@ int main ()
                 
                 
             }
-/*
-            cout << "----------------------------" << endl;
-            cout << "This is the good numbers so far: " << GoodNumbers[b] << endl;
-*/
-    }
-        
-        
-
-
-        if (NewNumber3 > lim){}
-        else {
-            OldNumber3 = NewNumber3;
         }
-        if (NewNumber5 > lim){}
-        else {
-            OldNumber5 = NewNumber5;
-        }
-        
-        i++;
-        
-    
-    }
 
     //cout << "" << endl;
 

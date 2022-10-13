@@ -1,11 +1,10 @@
 #include <iostream>
 #include <vector>
-#include <bits/stdc++.h>
-using namespace std;
+#include <algorithm>
 
 int main ()
 {
-    vector<int> GoodNumbers;
+    std::vector<int> GoodNumbers;
 
     int Number3 = 3;
     int Number5 = 5;
@@ -22,15 +21,22 @@ int main ()
 
     int lim;
     
-    cout << "What is the limit you are after?" << endl;
-    cout << "" << endl;
-    
-    cin >> lim;
-    
-    cout << "------------------" << endl;
-    cout << "" << endl;
+    /*
+    *   Ask what the max limit the user want to check for
+    */
 
-    while (i <= lim * 100)
+    std::cout << "What is the limit you are after?" << std::endl;
+    std::cout << "" << std::endl;
+    
+    std::cin >> lim;
+    
+    std::cout << "------------------" << std::endl;
+    std::cout << "" << std::endl;
+
+    /*
+    *   Go through each multiple of 3 and 5 until reached the limit and add to vector
+    */
+    while (i <= lim)
     {   
         int NewNumber3 = i * Number3;
         int NewNumber5 = i * Number5;
@@ -56,6 +62,9 @@ int main ()
             }           
         }
 
+        /*
+        *   If NewNumber is above the limit return or make OldNumber equal NewNumber
+        */
         if (NewNumber3 > lim)
         {
             break;
@@ -64,6 +73,7 @@ int main ()
         {
             OldNumber3 = NewNumber3;
         }
+
         if (NewNumber5 > lim)
         {
         
@@ -73,17 +83,22 @@ int main ()
             OldNumber5 = NewNumber5;
         }
         
-        cout << "This is round: " << i << endl;
-
         i++;
     }
 
-    cout << "------------------" << endl;
-    cout << "Sorting..." << endl;
-    cout << "------------------" << endl;
+    std::cout << "------------------" << std::endl;
+    std::cout << "Sorting..." << std::endl;
+    std::cout << "------------------" << std::endl;
     
+    /*
+    *   Sort the numbers in the vector
+    */
+
     sort(GoodNumbers.begin(), GoodNumbers.end());
 
+    /*
+    *   Remove duplicates numbers
+    */
     for (int b = 0; b < GoodNumbers.size(); b++)
     {
         if (b > 0)
@@ -95,24 +110,31 @@ int main ()
         }
     }
 
+    /*
+    *   Calculate the sum
+    */    
     for (int c = 0; c < GoodNumbers.size(); c++)
     {
         sum += GoodNumbers[c]; 
     }
 
-    cout << "The multiples of 3 and 5 are: ";
+
+    /*
+    *   Display the information
+    */
+    std::cout << "The multiples of 3 and 5 are: ";
     
     for (int b = 0; b < GoodNumbers.size(); b++)
     {
-        cout << "" << GoodNumbers[b];
-        cout << ", ";
+        std::cout << "" << GoodNumbers[b];
+        std::cout << ", ";
     }
     
-    cout << "" << endl;
-    cout << "------------------------------" << endl;
-    cout << "" << endl;
-    cout << "The sum is: "<< sum << endl;
-    cout << "" << endl;
+    std::cout << "" << std::endl;
+    std::cout << "------------------------------" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "The sum is: "<< sum << std::endl;
+    std::cout << "" << std::endl;
     
     return 0;
 }
